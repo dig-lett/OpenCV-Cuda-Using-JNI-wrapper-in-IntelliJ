@@ -23,12 +23,12 @@ d. Follow these instructions for rest installation:
     ] + PYTHON_EXTENSIONS_PATHS  
 /```     
 
-_To check installation and version of the NVCC compiler:_
-`nvcc -V`
-_To check installation and version of the OpenCV in your system:_
-`python3  
-import cv2  
-cv2.__version__`  
+_To check installation and version of the NVCC compiler:_  
+`nvcc -V`  
+_To check installation and version of the OpenCV in your system:_  
+`python3    
+import cv2    
+cv2.__version__`    
 
 d. .so file can be found in opencv/build/lib & .jar file can be found in opencv/build/bin  
 e. Copy paste both these files in the library directory of your IntelliJ project. If you don't have one for your project, it is always advisable to create one  
