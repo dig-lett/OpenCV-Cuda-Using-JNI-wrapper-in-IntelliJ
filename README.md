@@ -5,7 +5,7 @@ This repository contains instructions to run OpenCV Cuda using JNI wrapper in In
 
 **1. Install Nvidia Driver for your system:  **  
 
-a. Follow pre-installation at https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+a. Follow pre-installation at https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html   
 b. 
 
 **2. Build OpenCV with CUDA and generate .so and .jar files:  **
