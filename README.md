@@ -44,7 +44,14 @@ Define your various methods defined earlier in .cpp file for the wrapper and cop
 **`3. Generation of .so file:`**
 
    a. Open Terminal and run:
-g++ -Wl,--enable-new-dtags -fPIC -o {path for o/p file directory that contains the library for the IntelliJ environment}/{name of o/p file e.g.home/wrapper/lib**wrapper**.so } -lc -shared -I{path to jni.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include_} -I{path to jni_md.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include/linux_} {name of your cpp file e.g._com_morphle_wrapper_Cuda_libraries_Cudawrapper.cpp_} \`pkg-config opencv --cflags --libs\`
+
+g++ -Wl,--enable-new-dtags -fPIC 
+-o {path for o/p file directory that contains the library for the IntelliJ environment}/{name of o/p file e.g.home/wrapper/lib**wrapper**.so } 
+-lc -shared 
+-I{path to jni.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include_} 
+-I{path to jni_md.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include/linux_} 
+{name of your cpp file e.g._com_morphle_wrapper_Cuda_libraries_Cudawrapper.cpp_} 
+\`pkg-config opencv --cflags --libs\`
 
 An example of the command to run:
 _g++ -Wl,--enable-new-dtags -fPIC -o /etc/libs/libCudaWrapperImpl.so -lc -shared -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux Cudawrapper.cpp \`pkg-config opencv --cflags --libs\`_
