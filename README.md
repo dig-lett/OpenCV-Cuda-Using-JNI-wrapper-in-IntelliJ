@@ -64,7 +64,7 @@ Here, .so filename is e.g._lib**wrapper**.so_. The text marked in bold will be u
 
 1. Open IntelliJ and open your project.   
 2. Create a new java file and create a constructor    
-3. Add a line to load the just created .so library file: _`System.loadLibrary("**wrapper**");`_   
+3. Add a line to load the just created .so library file: _`System.loadLibrary("wrapper");`_   
 4. Proceed forward to use the various methods already defined in the .h and .cpp file earlier  
 
 _Check an example .java file at:_  
