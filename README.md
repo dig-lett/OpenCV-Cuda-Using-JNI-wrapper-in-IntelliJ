@@ -16,8 +16,8 @@ d. Follow these instructions for rest installation:
 > sudo /bin/bash -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'  
 > sudo ldconfig  
 > sudo cp -r ~/.virtualenvs/opencv_cuda/lib/python3.6/site-packages/cv2 /usr/local/lib/python3.6/dist-packages  
-> sudo nano /usr/local/lib/python3.6/dist-packages/cv2/config-3.6.py and add:  
->> /```   
+> sudo nano /usr/local/lib/python3.6/dist-packages/cv2/config-3.6.py and add:   
+> /```   
     PYTHON_EXTENSIONS_PATHS = [
     os.path.join('/usr/local/lib/python3.8/dist-packages/cv2', 'python-3.8')
     ] + PYTHON_EXTENSIONS_PATHS  
