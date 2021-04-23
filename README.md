@@ -3,9 +3,12 @@ This repository contains instructions to run OpenCV Cuda using JNI wrapper in In
 
 # Setup IntelliJ environment for OpenCV with pre-built libraries of CUDA:  
 
-1. Install Nvidia Driver for your system:  
+**1. Install Nvidia Driver for your system:  **  
 
-2. Build OpenCV with CUDA and generate .so and .jar files:  
+a. Follow pre-installation at https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+b. 
+
+**2. Build OpenCV with CUDA and generate .so and .jar files:  **
 
 
 # Writing a JNI wrapper for running C++:
@@ -21,7 +24,7 @@ Then, follow the steps for .h file generation:
    a. File->Settings->External Tools  
    b. Click the + button for the "Edit Tool" dialog  
    c. The following are the form name/value pairs I used:  
-`> Name: javah  
+> Name: javah  
 > Group: Java  
 > Description: Java Native Interface C Header and Stub File Generator  
 > Options: Check All  
@@ -30,7 +33,7 @@ Then, follow the steps for .h file generation:
 > Program: {Path to javah: Open a terminal and type: locate bin/javah} e.g._/usr/lib/jvm/java-8-openjdk-amd64/bin/javah_  
 > Parameters: -jni -v -d $FileDir$ $FileClass$            
 > Working directory: $SourcepathEntry$  
-> Click OK, Click OK `
+> Click OK, Click OK 
  
    d. Navigate to your java class with the native method    
    e. With the java class being shown in the editor, go to Tools->Java->javah  
