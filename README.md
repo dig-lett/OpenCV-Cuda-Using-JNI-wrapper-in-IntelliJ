@@ -31,7 +31,7 @@ Then, follow the steps for .h file generation:
 > Parameters: -jni -v -d $FileDir$ $FileClass$            
 > Working directory: $SourcepathEntry$  
 > Click OK, Click OK   
-   d. Navigate to your java class with the native method 
+   d. Navigate to your java class with the native method    
    e. With the java class being shown in the editor, go to Tools->Java->javah  
 
 *Notice the .h file has been generated in the same directory as your class.*  
