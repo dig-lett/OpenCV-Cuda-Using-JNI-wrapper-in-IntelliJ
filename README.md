@@ -21,17 +21,17 @@ Then, follow the steps for .h file generation:
    a. File->Settings->External Tools  
    b. Click the + button for the "Edit Tool" dialog  
    c. The following are the form name/value pairs I used:  
-      Name: javah  
-      Group: Java  
-      Description: Java Native Interface C Header and Stub File Generator  
-      Options: Check All  
-      Show in: Check All  
-      Tool Settings...  
-      Program: Open a terminal and type: locate bin/javah  
-      /usr/lib/jvm/java-8-openjdk-amd64/bin/javah  
-      Parameters: -jni -v -d $FileDir$ $FileClass$            
-      Working directory: $SourcepathEntry$  
-      Click OK, Click OK  
+ >     Name: javah  
+ >     Group: Java  
+ >    Description: Java Native Interface C Header and Stub File Generator  
+ >     Options: Check All  
+ >     Show in: Check All  
+ >     Tool Settings...  
+ >     Program: Open a terminal and type: locate bin/javah  
+ >     /usr/lib/jvm/java-8-openjdk-amd64/bin/javah  
+ >     Parameters: -jni -v -d $FileDir$ $FileClass$            
+ >     Working directory: $SourcepathEntry$  
+ >     Click OK, Click OK  
    d. Navigate to your java class with the native method 
    e. With the java class being shown in the editor, go to Tools->Java->javah  
 
