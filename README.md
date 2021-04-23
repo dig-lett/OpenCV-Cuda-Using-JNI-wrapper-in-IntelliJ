@@ -23,12 +23,11 @@ Then, follow the steps for .h file generation:
    c. The following are the form name/value pairs I used:  
  >     Name: javah  
  >     Group: Java  
- >    Description: Java Native Interface C Header and Stub File Generator  
+ >     Description: Java Native Interface C Header and Stub File Generator  
  >     Options: Check All  
  >     Show in: Check All  
  >     Tool Settings...  
- >     Program: Open a terminal and type: locate bin/javah  
- >     /usr/lib/jvm/java-8-openjdk-amd64/bin/javah  
+ >     Program: {Path to javah: Open a terminal and type: locate bin/javah} e.g._/usr/lib/jvm/java-8-openjdk-amd64/bin/javah_  
  >     Parameters: -jni -v -d $FileDir$ $FileClass$            
  >     Working directory: $SourcepathEntry$  
  >     Click OK, Click OK  
