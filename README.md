@@ -58,7 +58,7 @@ An example of the command to run:
 _g++ -Wl,--enable-new-dtags -fPIC -o /etc/libs/libCudaWrapperImpl.so -lc -shared -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux Cudawrapper.cpp \`pkg-config opencv --cflags --libs\`_  
 
 Note the .so filenmae.    
-Here, .so filename is e.g._lib**wrapper**.so_. The text marked in bold will be used in the System.loadLibrary("wrapper");
+Here, .so filename is e.g._lib**wrapper**.so_. The text marked in bold will be used in java class to be created as System.loadLibrary("wrapper");
 
 # Try and Test by running an OpenCV program:    
 
