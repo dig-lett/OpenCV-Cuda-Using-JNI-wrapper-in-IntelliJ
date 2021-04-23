@@ -11,7 +11,7 @@ This repository contains instructions to run OpenCV Cuda using JNI wrapper in In
 # Writing a JNI wrapper for running C++:
 Creating a JNI wrapper involves 3 steps:  
 
-**`1. Generation of .h file for the wrapper:`**  
+**1. Generation of .h file for the wrapper:**  
 
 Write a java class in your wrapper package with native libraries and instantiate various methods you want.   
 *For an example check: *  
@@ -37,12 +37,12 @@ Then, follow the steps for .h file generation:
 
 *Notice the .h file has been generated in the same directory as your class.*  
 
-**`2. Write the .cpp file for JNI wrapper with OpenCV Algorithm implementation:`**  
+**2. Write the .cpp file for JNI wrapper with OpenCV Algorithm implementation:**  
 
 Define your various methods defined earlier in .cpp file for the wrapper and copy your c++ OpenCV implemenatation in the .cpp file.  
 _Check an example .cpp file at:_  
 
-**`3. Generation of .so file:`**  
+**3. Generation of .so file:**  
 
    a. Open Terminal and run:  
 
