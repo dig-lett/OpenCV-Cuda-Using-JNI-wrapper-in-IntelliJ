@@ -10,18 +10,15 @@ b. Follow instructions available at the link given below to install Nvidia Drive
 c. To generate the .so file and .jar file required for implementing OpenCV in JAVA add a few flags in the CMake command and thus, the final Cmake looks like: 
 > cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_C_COMPILER=/usr/bin/gcc-7 -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D INSTALL_C_EXAMPLES=OFF -D **BUILD_SHARED_LIBRARY**=OFF -D BUILD_TESTS=OFF -D JAVA_AWT_INCLUDE_PATH=/usr/lib/jvm/java-8-openjdk-amd64/include -D JAVA_AWT_LIBRARY=/usr/lib/jvm/java-8-openjdk-amd64/include/jawt.h -D JAVA_INCLUDE_PATH=/usr/lib/jvm/java-8-openjdk-amd64/include -D JAVA_INCLUDE_PATH2=/usr/lib/jvm/java-8-openjdk-amd64/include/linux -D JAVA_JVM_LIBRARY=/usr/lib/jvm/java-8-openjdk-amd64/include/jni.h -D ANT_EXECUTABLE=/usr/bin/ant -D WITH_TBB=ON -D WITH_CUDA=ON -D BUILD_opencv_cudacodec=OFF -D ENABLE_FAST_MATH=1 -D BUILD_PERF_TESTS=OFF -D CUDA_FAST_MATH=1 -D WITH_CUBLAS=1 -D WITH_V4L=ON -D WITH_QT=OFF -D WITH_OPENGL=ON -D WITH_GSTREAMER=ON -D OPENCV_GENERATE_PKGCONFIG=ON -D OPENCV_PC_FILE_NAME=opencv.pc -D OPENCV_ENABLE_NONFREE=ON -D OPENCV_PYTHON3_INSTALL_PATH=~/.virtualenvs/opencv_cuda/lib/python3.6/site-packages -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules -D PYTHON_EXECUTABLE=~/.virtualenvs/opencv_cuda/bin/python -D BUILD_EXAMPLES=ON -D WITH_CUDNN=ON -D OPENCV_DNN_CUDA=ON -D **CUDA_ARCH_BIN**=3.5 .. 
 
-d. Follow these instructions for rest installation: 
+d. Follow these instructions for rest installation:  
+  
 > make -j8  
 > sudo make install  
 > sudo /bin/bash -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'  
 > sudo ldconfig  
 > sudo cp -r ~/.virtualenvs/opencv_cuda/lib/python3.6/site-packages/cv2 /usr/local/lib/python3.6/dist-packages  
 > sudo nano /usr/local/lib/python3.6/dist-packages/cv2/config-3.6.py and add:   
-> /```   
-    PYTHON_EXTENSIONS_PATHS = [
-    os.path.join('/usr/local/lib/python3.8/dist-packages/cv2', 'python-3.8')
-    ] + PYTHON_EXTENSIONS_PATHS  
-/```     
+> PYTHON_EXTENSIONS_PATHS = [os.path.join('/usr/local/lib/python3.8/dist-packages/cv2', 'python-3.8')] + PYTHON_EXTENSIONS_PATHS    
 
 _To check installation and version of the NVCC compiler:_  
 `nvcc -V`  
