@@ -30,7 +30,7 @@ Then, follow the steps for .h file generation:
 > Program: {Path to javah: Open a terminal and type: locate bin/javah} e.g._/usr/lib/jvm/java-8-openjdk-amd64/bin/javah_  
 > Parameters: -jni -v -d $FileDir$ $FileClass$            
 > Working directory: $SourcepathEntry$  
-> Click OK, Click OK  
+> Click OK, Click OK   
    d. Navigate to your java class with the native method 
    e. With the java class being shown in the editor, go to Tools->Java->javah  
 
