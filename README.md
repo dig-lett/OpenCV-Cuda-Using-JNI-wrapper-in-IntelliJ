@@ -47,7 +47,7 @@ _Check an example .cpp file at:_
    a. Open Terminal and run:  
 
 > g++ -Wl,--enable-new-dtags -fPIC   
-> -o {path for o/p file directory that contains the library for the IntelliJ environment}/{name of o/p file e.g.home/wrapper/lib**wrapper**.so }   
+> -o {path for o/p file directory that contains the library for the IntelliJ environment}/{name of o/p file e.g_.home/wrapper/lib**wrapper**.so_}   
 > -lc -shared   
 > -I{path to jni.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include_}   
 > -I{path to jni_md.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include/linux_}   
@@ -57,5 +57,14 @@ _Check an example .cpp file at:_
 An example of the command to run:  
 _g++ -Wl,--enable-new-dtags -fPIC -o /etc/libs/libCudaWrapperImpl.so -lc -shared -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux Cudawrapper.cpp \`pkg-config opencv --cflags --libs\`_  
 
+Note the .so filenmae.    
+Here, .so filename is e.g._lib**wrapper**.so_. The text marked in bold will be used in the System.loadLibrary("wrapper");
+
 # Try and Test by running an OpenCV program:  
 
+1. Open IntelliJ and open your project.  
+2. Create a new java file and create a constructor 
+3. Add a line to load the just created .so library file: System.loadLibrary("wrapper");
+4. Proceed forward to use the various methods already defined in the .h and .cpp file earlier
+
+_Check an example .java file at:_  
