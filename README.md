@@ -21,7 +21,7 @@ Then, follow the steps for .h file generation:
    a. File->Settings->External Tools  
    b. Click the + button for the "Edit Tool" dialog  
    c. The following are the form name/value pairs I used:  
-> Name: javah  
+`> Name: javah  
 > Group: Java  
 > Description: Java Native Interface C Header and Stub File Generator  
 > Options: Check All  
@@ -30,7 +30,7 @@ Then, follow the steps for .h file generation:
 > Program: {Path to javah: Open a terminal and type: locate bin/javah} e.g._/usr/lib/jvm/java-8-openjdk-amd64/bin/javah_  
 > Parameters: -jni -v -d $FileDir$ $FileClass$            
 > Working directory: $SourcepathEntry$  
-> Click OK, Click OK 
+> Click OK, Click OK `
  
    d. Navigate to your java class with the native method    
    e. With the java class being shown in the editor, go to Tools->Java->javah  
@@ -52,7 +52,7 @@ _Check an example .cpp file at:_
 > -I{path to jni.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include_}   
 > -I{path to jni_md.h e.g._/usr/lib/jvm/java-8-openjdk-amd64/include/linux_}   
 > {name of your cpp file e.g._com_morphle_wrapper_Cuda_libraries_Cudawrapper.cpp_}   
-> \`pkg-config opencv --cflags --libs\`  
+> \`pkg-config opencv --cflags --libs\`   
 
 An example of the command to run:  
 _g++ -Wl,--enable-new-dtags -fPIC -o /etc/libs/libCudaWrapperImpl.so -lc -shared -I/usr/lib/jvm/java-8-openjdk-amd64/include -I/usr/lib/jvm/java-8-openjdk-amd64/include/linux Cudawrapper.cpp \`pkg-config opencv --cflags --libs\`_  
