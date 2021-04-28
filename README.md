@@ -12,7 +12,7 @@ c. To generate the .so file and .jar file required for implementing OpenCV in JA
 
 d. Follow these instructions for rest installation:  
   
-> make -j8  
+> make -j8   
 > sudo make install  
 > sudo /bin/bash -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'  
 > sudo ldconfig  
